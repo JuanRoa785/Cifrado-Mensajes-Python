@@ -1,4 +1,4 @@
-# Cifrado de Mensajes en Python - Seguridad Informática F1 - UIS
+# Cifrado de Mensajes en Python - Seguridad Informática F1 - UIS:
 
 ## 🛠️ Tecnologías utilizadas
 ![image](https://github.com/user-attachments/assets/7846c41e-dfec-4ae9-bd5c-f327ee2a03c5)
@@ -68,7 +68,7 @@ http://localhost:8081/ #Front con publisher Jesus
 
 ## Créditos y código fuente original
 
-Este proyecto fue adaptado a partir del repositorio original de Juan Roa:
+Este proyecto fue adaptado a partir del repositorio original de Juan Diego Roa:
 
 🔗 [JuanRoa785/Taller-RabbitMQ](https://github.com/JuanRoa785/Taller-RabbitMQ)
 
