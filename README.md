@@ -72,7 +72,7 @@ http://localhost:8081/ #Front con publisher Jesus
   <img src="https://github.com/user-attachments/assets/2d1bb4aa-e266-4c3a-a404-9a05248f7dc4" />
 </p>
 
-## Créditos y código fuente original
+## Créditos y Código Fuente Original
 
 Este proyecto fue adaptado a partir del repositorio original de Juan Diego Roa:
 
