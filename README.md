@@ -1,4 +1,10 @@
 # Cifrado de Mensajes en Python - Seguridad Informática F1 - UIS:
+## 👥 Integrantes
+- **Juan Diego Roa Porras (2210086)**
+- **Jesús David Ramírez Celis (2211593)**
+
+## ¿Qué buscamos con este Laboratorio?
+<p align="justify">El objetivo principal es aprender cómo aplicar técnicas básicas de cifrado simétrico utilizando Python. Con esto se pretende asegurar que los datos enviados entre dos usuarios sean privados y que no se hayan alterado durante la transmisión. En resumen, se busca garantizar la confidencialidad e integridad de los datos, lo cual se traducirá en una mayor robustez del sistema de información.</p>
 
 ## 🛠️ Tecnologías utilizadas
 ![image](https://github.com/user-attachments/assets/7846c41e-dfec-4ae9-bd5c-f327ee2a03c5)
