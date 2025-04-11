@@ -3,8 +3,11 @@
 - **Juan Diego Roa Porras (2210086)**
 - **Jesús David Ramírez Celis (2211593)**
 
-## ¿Qué buscamos con este Laboratorio?
+## ❓ ¿Qué buscamos con este Laboratorio?
 <p align="justify">El objetivo principal es aprender cómo aplicar técnicas básicas de cifrado simétrico utilizando Python. Con esto se pretende asegurar que los datos enviados entre dos usuarios sean privados y que no se hayan alterado durante la transmisión. En resumen, se busca garantizar la confidencialidad e integridad de los datos, lo cual se traducirá en una mayor robustez del sistema de información.</p>
+
+## 💡 Explicación general de la solución Implementada:
+📄 **[Explicación Solución](./Solucion_Seguridad_en_SI.pdf)**
 
 ## 🛠️ Tecnologías utilizadas
 ![image](https://github.com/user-attachments/assets/7846c41e-dfec-4ae9-bd5c-f327ee2a03c5)
@@ -72,9 +75,41 @@ http://localhost:8081/ #Front con publisher Jesus
   <img src="https://github.com/user-attachments/assets/2d1bb4aa-e266-4c3a-a404-9a05248f7dc4" />
 </p>
 
-## Créditos y Código Fuente Original
+## 🔐 Ejemplo sencillo de encriptación y desencriptación
+```python
+from cryptography.fernet import Fernet
+import json
 
-Este proyecto fue adaptado a partir del repositorio de Juan Diego Roa:
+secretKey = Fernet.generate_key()
+
+print("Tu llave secreta es: " + secretKey.decode() + "\n") 
+
+fernet = Fernet(secretKey)
+
+mensaje = {
+    "autor": "Estudiante UIS",
+    "fecha": "11-04-2025", 
+    "routing_key": "N.A",
+    "exchange": "N.A",
+    "mensaje": "Este es un mensaje de prueba para comprobar la encriptación usando Fernet:"
+}
+
+mensaje_bytes = json.dumps(mensaje).encode('utf-8')
+print("El mensaje convertido a bytes es el siguiente:\n" + str(mensaje_bytes) + "\n")
+
+mensaje_encriptado = fernet.encrypt(mensaje_bytes)
+print("El mensaje encriptado es el siguiente:\n" + str(mensaje_encriptado) + "\n")
+
+mensaje_desencriptado = fernet.decrypt(mensaje_encriptado)
+print("El mensaje desencriptado es el siguiente:\n" + str(json.loads(mensaje_desencriptado)) + "\n")
+```
+**Al  ejecutarlo con `python3 ejemploSencillo.py` se obtendrá una salida similar a esta:**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/79f35166-ee27-429e-b186-7377520348e8" />
+</p>
+
+## Créditos y Código Fuente Original
+<p align="justify">Este proyecto fue adaptado a partir de un código similar desarrollado por Juan Diego Roa para la asignatura de <b>Principios de Desarrollo Orientado a Objetos</b> de la <b>Universidad Industrial de Santander</b>:</p>
 
 🔗 [JuanRoa785/Taller-RabbitMQ](https://github.com/JuanRoa785/Taller-RabbitMQ)
 
