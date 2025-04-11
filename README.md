@@ -48,7 +48,7 @@ cd ../ #Volvemos a la raiz del proyecto
 
 docker compose up -d
 ```
-> ⚠ **Importante:** Antes de acceder a la URL de alguno de los dos fronts (puertos 8080 y 8081) esperar que los contenedores esten en este estado:
+> ⚠ **Importante:** Antes de acceder a la URL de alguno de los dos fronts (puertos 8080 y 8081), asegúrate de que todos los contenedores se encuentren en estado **"Healthy"** o **"Started"**.:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/35c50a93-582c-4475-a0b3-390de6dfbbd2" />
 </p>
