@@ -74,7 +74,7 @@ http://localhost:8081/ #Front con publisher Jesus
 
 ## Créditos y Código Fuente Original
 
-Este proyecto fue adaptado a partir del repositorio original de Juan Diego Roa:
+Este proyecto fue adaptado a partir del repositorio de Juan Diego Roa:
 
 🔗 [JuanRoa785/Taller-RabbitMQ](https://github.com/JuanRoa785/Taller-RabbitMQ)
 
