@@ -113,4 +113,4 @@ print("El mensaje desencriptado es el siguiente:\n" + str(json.loads(mensaje_des
 
 🔗 [JuanRoa785/Taller-RabbitMQ](https://github.com/JuanRoa785/Taller-RabbitMQ)
 
-Se realizaron modificaciones sobre el código original para ajustarlo a los requerimientos específicos de este taller.
+Se realizaron modificaciones a esa versión original para adaptarla a los requerimientos específicos de este taller.
