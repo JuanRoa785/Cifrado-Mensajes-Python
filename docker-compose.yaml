@@ -1,0 +1,65 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: taller_rabbitmq
+    hostname: taller_rabbitmq
+    networks:
+      - taller_seguridad
+    ports:
+      - 5672:5672
+      - 15672:15672
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  back_python_1:
+    image: back_seguridad
+    container_name: back_python_1
+    networks:
+      - taller_seguridad
+    environment:
+      - RABBIT_URL=taller_rabbitmq
+      - "SECRET_KEY=VgVkBfLgeGSUC-YISHn05mxu8z3y57a3PfRAkIgL75o="
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    ports:
+      - 8000:8000
+  
+  front_python_1:
+    image: front_seguridad
+    container_name: front_python_1
+    environment:
+      - API_URL=localhost:8000
+      - PUBLISHER=Roa
+    ports:
+      - 8080:8080
+
+  back_python_2:
+    image: back_seguridad
+    container_name: back_python_2
+    networks:
+      - taller_seguridad
+    environment:
+      - RABBIT_URL=taller_rabbitmq
+      - "SECRET_KEY=VgVkBfLgeGSUC-YISHn05mxu8z3y57a3PfRAkIgL75o="
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    ports:
+      - 8001:8000
+  
+  front_python_2:
+    image: front_seguridad
+    container_name: front_python_2
+    environment:
+      - API_URL=localhost:8001
+      - PUBLISHER=Jesus
+    ports:
+      - 8081:8080
+
+networks:
+  taller_seguridad:
+    driver: bridge
